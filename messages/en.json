@@ -1,0 +1,66 @@
+{
+  "common": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "settings": "Settings",
+    "search": "Search",
+    "creax": "Creax",
+    "tagline": "The New Form of Music Production"
+  },
+  "home": {
+    "hero_title": "The New Form of Music Production",
+    "hero_subtitle": "Revolutionary music production matching platform connecting clients and creators",
+    "register_creator": "Register as Creator",
+    "register_client": "Register as Client",
+    "features": {
+      "title": "Why Choose Creax",
+      "high_return": "Industry-Leading Return Rate",
+      "high_return_desc": "Only 15% commission. 85% of revenue goes to creators.",
+      "focus_creators": "Focus on Behind-the-Scenes Creators",
+      "focus_creators_desc": "Supporting arrangers, engineers, and other music production professionals.",
+      "secure_payment": "Secure Payment System",
+      "secure_payment_desc": "Safe transactions guaranteed with escrow service. PayPay supported."
+    }
+  },
+  "auth": {
+    "email": "Email Address",
+    "password": "Password",
+    "confirm_password": "Confirm Password",
+    "forgot_password": "Forgot Password?",
+    "remember_me": "Remember Me",
+    "login_button": "Login",
+    "register_button": "Create Account",
+    "or_continue_with": "Or continue with"
+  },
+  "client": {
+    "projects": "Project Management",
+    "new_project": "Post New Project",
+    "project_list": "Project List",
+    "applicants": "Applicants",
+    "messages": "Messages",
+    "payments": "Payment Management"
+  },
+  "creator": {
+    "find_jobs": "Find Jobs",
+    "my_applications": "My Applications",
+    "orders": "Order Management",
+    "portfolio": "Portfolio",
+    "earnings": "Earnings",
+    "withdraw": "Withdraw Request"
+  },
+  "payment": {
+    "checkout": "Checkout",
+    "payment_method": "Payment Method",
+    "credit_card": "Credit Card",
+    "paypay": "PayPay",
+    "convenience_store": "Convenience Store",
+    "bank_transfer": "Bank Transfer",
+    "service_fee": "Service Fee",
+    "total": "Total",
+    "confirm_payment": "Confirm Payment",
+    "escrow_notice": "Secure transaction with escrow service"
+  }
+}

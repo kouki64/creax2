@@ -1,0 +1,66 @@
+{
+  "common": {
+    "login": "ログイン",
+    "signup": "新規登録",
+    "logout": "ログアウト",
+    "dashboard": "ダッシュボード",
+    "profile": "プロフィール",
+    "settings": "設定",
+    "search": "検索",
+    "creax": "Creax",
+    "tagline": "音楽制作の新しいカタチ"
+  },
+  "home": {
+    "hero_title": "音楽制作の新しいカタチ",
+    "hero_subtitle": "クライアントとクリエーターを繋ぐ革新的な音楽制作マッチングプラットフォーム",
+    "register_creator": "クリエーターとして登録",
+    "register_client": "クライアントとして登録",
+    "features": {
+      "title": "なぜCreaxが選ばれるのか",
+      "high_return": "業界最高水準の還元率",
+      "high_return_desc": "手数料はわずか15%。クリエーターに85%の収益を還元します。",
+      "focus_creators": "裏方クリエーターに焦点",
+      "focus_creators_desc": "アレンジャー、エンジニアなど、音楽制作の裏方を支援。",
+      "secure_payment": "安心の決済システム",
+      "secure_payment_desc": "エスクローサービスで安全な取引を保証。PayPay対応。"
+    }
+  },
+  "auth": {
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "confirm_password": "パスワード（確認）",
+    "forgot_password": "パスワードを忘れた方",
+    "remember_me": "ログイン状態を保持",
+    "login_button": "ログイン",
+    "register_button": "アカウント作成",
+    "or_continue_with": "または以下の方法で続ける"
+  },
+  "client": {
+    "projects": "案件管理",
+    "new_project": "新規案件投稿",
+    "project_list": "案件一覧",
+    "applicants": "応募者",
+    "messages": "メッセージ",
+    "payments": "支払い管理"
+  },
+  "creator": {
+    "find_jobs": "案件を探す",
+    "my_applications": "応募中の案件",
+    "orders": "受注管理",
+    "portfolio": "ポートフォリオ",
+    "earnings": "収益管理",
+    "withdraw": "出金申請"
+  },
+  "payment": {
+    "checkout": "決済確認",
+    "payment_method": "支払い方法",
+    "credit_card": "クレジットカード",
+    "paypay": "PayPay",
+    "convenience_store": "コンビニ決済",
+    "bank_transfer": "銀行振込",
+    "service_fee": "サービス手数料",
+    "total": "合計",
+    "confirm_payment": "支払いを確定",
+    "escrow_notice": "エスクローサービスで安心取引"
+  }
+}

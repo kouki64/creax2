@@ -1,0 +1,95 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"  // 開発環境ではSQLite、本番ではPostgreSQLに変更
+  url      = env("DATABASE_URL")
+}
+
+// ユーザーモデル
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  password      String
+  name          String
+  userType      String    // "client" or "creator"
+  isVerified    Boolean   @default(false)
+  
+  // プロフィール情報
+  avatar        String?
+  bio           String?
+  company       String?
+  
+  // クリエーター専用フィールド
+  skills        String?   // JSON文字列として保存
+  portfolio     String?   // JSON文字列として保存
+  hourlyRate    Int?
+  rating        Float     @default(0)
+  
+  // リレーション
+  clientProjects    Project[]  @relation("ClientProjects")
+  creatorApplications Application[]
+  sentMessages      Message[]  @relation("SentMessages")
+  receivedMessages  Message[]  @relation("ReceivedMessages")
+  
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+// プロジェクト（案件）モデル
+model Project {
+  id            String    @id @default(cuid())
+  title         String
+  description   String
+  category      String
+  budget        Int
+  deadline      DateTime
+  status        String    @default("open") // open, in_progress, completed, cancelled
+  projectType   String    // competition, direct
+  
+  // リレーション
+  client        User      @relation("ClientProjects", fields: [clientId], references: [id])
+  clientId      String
+  applications  Application[]
+  
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+// 応募モデル
+model Application {
+  id            String    @id @default(cuid())
+  proposedPrice Int
+  message       String
+  status        String    @default("pending") // pending, accepted, rejected
+  
+  // リレーション
+  project       Project   @relation(fields: [projectId], references: [id])
+  projectId     String
+  creator       User      @relation(fields: [creatorId], references: [id])
+  creatorId     String
+  
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  @@unique([projectId, creatorId]) // 同じ案件に複数回応募できないように
+}
+
+// メッセージモデル
+model Message {
+  id            String    @id @default(cuid())
+  content       String
+  isRead        Boolean   @default(false)
+  
+  // リレーション
+  sender        User      @relation("SentMessages", fields: [senderId], references: [id])
+  senderId      String
+  receiver      User      @relation("ReceivedMessages", fields: [receiverId], references: [id])
+  receiverId    String
+  
+  createdAt     DateTime  @default(now())
+}
